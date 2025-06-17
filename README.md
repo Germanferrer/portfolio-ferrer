@@ -2,7 +2,7 @@
 
 ¡Bienvenido/a a mi portfolio personal!
 
-Este sitio muestra algunos de mis proyectos relacionados con ingeniería, diseño y automatización. Está hecho con HTML y CSS, y tiene como objetivo presentar mi trabajo de forma clara y profesional.
+Este sitio muestra algunos de mis proyectos relacionados con ingeniería, diseño y automatización. Tiene como objetivo presentar mi trabajo de forma clara y profesional.
 
 ## 🧰 Tecnologías usadas
 
