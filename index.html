@@ -9,6 +9,8 @@
       background-color: #f0f4f8;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
+      color: #333;
     }
 
     .header {
@@ -17,12 +19,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid #ccc;
+      border-bottom: 1px solid #ccc;
     }
 
     .titulo {
       font-size: 22px;
-      color: #333;
     }
 
     .descripcion {
@@ -37,44 +38,46 @@
       object-fit: cover;
     }
 
-    nav {
-      background-color: #fff;
-      padding: 10px 20px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #007acc;
-      font-weight: bold;
-    }
-
     section {
       padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
     }
 
     h2 {
-      color: #333;
-      border-left: 5px solid #007acc;
+      font-size: 18px;
+      border-left: 4px solid #007acc;
       padding-left: 10px;
+      margin-top: 40px;
+      color: #007acc;
     }
 
-    p, li {
-      color: #444;
-      line-height: 1.6;
+    .proyecto, .contacto {
+      margin-bottom: 20px;
     }
 
-    .galeria img {
-      width: 250px;
-      margin: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    .proyecto h3 {
+      margin: 10px 0 5px;
     }
 
     .archivo {
-      display: block;
-      margin-top: 5px;
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 14px;
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    .archivo:hover {
+      text-decoration: underline;
+    }
+
+    img.preview {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-top: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -82,64 +85,45 @@
 
   <div class="header">
     <div>
-      <div class="titulo"><strong>germanferrer</strong>/<strong>portfolio-ferrer</strong></div>
+      <div class="titulo"><strong>Germanferrer</strong>/<strong>portfolio-ferrer</strong></div>
       <div class="descripcion">Portfolio de proyectos de ingeniería y diseño</div>
     </div>
     <img class="avatar" src="https://media.licdn.com/dms/image/v2/D4D03AQEXPSX1kp8Vfw/profile-displayphoto-shrink_400_400/B4DZX8gZTcGkAk-/0/1743698106302?e=1755734400&v=beta&t=m62Pt3zFer0V-EpIxzT17-gIpIJK0p55D4sP1KQMjhg" alt="German Ferrer">
   </div>
 
-  <nav>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#galeria">Fotos y Archivos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <section id="sobre-mi">
+  <section>
     <h2>📌 Sobre mí</h2>
-    <p>
-      Técnico electromecánico y estudiante avanzado de Ingeniería Industrial en la UTN FRH.
-      Mi enfoque está en la mejora continua de productos y procesos industriales, integrando herramientas de diseño, automatización y gestión.
-    </p>
+    <p>Técnico electromecánico y estudiante avanzado de Ingeniería Industrial en UTN FRH. Me especializo en la mejora de productos y procesos mediante diseño técnico, automatización y gestión.</p>
   </section>
 
-  <section id="proyectos">
-    <h2>🛠 Proyectos destacados</h2>
-    <ul>
-      <li><strong>Granalladora Automatizada:</strong> diseño, fabricación e integración.</li>
-      <li><strong>Sistema de aspiración de polvo:</strong> análisis, dimensionado y puesta en marcha.</li>
-      <li><strong>Básculas industriales:</strong> automatización y conexión con sistemas SCADA.</li>
-    </ul>
-  </section>
+  <section>
+    <h2>🛠 Proyectos</h2>
 
-  <section id="galeria">
-    <h2>📸 Fotos y Archivos</h2>
-
-    <h3>🔹 Proyecto: Granalladora</h3>
-    <div class="galeria">
-      <img src="assets/granalladora1.jpg" alt="Granalladora diseño">
-      <img src="assets/granalladora2.jpg" alt="Granalladora instalación">
+    <div class="proyecto">
+      <h3>Granalladora automatizada</h3>
+      <p>Diseño y puesta en marcha de equipo de granallado con sistema automatizado.</p>
+      <img class="preview" src="assets/granalladora1.jpg" alt="Granalladora">
+      <a class="archivo" href="docs/manual_granalladora.pdf" target="_blank">📄 Ver manual técnico</a>
     </div>
-    <a class="archivo" href="docs/manual_granalladora.pdf" target="_blank">📄 Ver manual técnico</a>
 
-    <h3>🔹 Proyecto: Colector de polvo</h3>
-    <div class="galeria">
-      <img src="assets/colector1.jpg" alt="Colector armado">
+    <div class="proyecto">
+      <h3>Colector de polvo</h3>
+      <p>Desarrollo y supervisión del sistema de captación de partículas en ambiente industrial.</p>
+      <img class="preview" src="assets/colector1.jpg" alt="Colector de polvo">
+      <a class="archivo" href="docs/informe_colector.pdf" target="_blank">📄 Ver informe técnico</a>
     </div>
-    <a class="archivo" href="docs/informe_colector.pdf" target="_blank">📄 Informe técnico</a>
   </section>
 
-  <section id="contacto">
+  <section>
     <h2>📬 Contacto</h2>
-    <p>Podés encontrarme en:</p>
-    <ul>
-      <li>💼 <a href="https://www.linkedin.com/in/germanignacioferrer/" target="_blank">LinkedIn</a></li>
-      <li>🧑‍💻 <a href="https://github.com/germanferrer" target="_blank">GitHub</a></li>
-      <li>📧 <a href="mailto:germanferrerok@gmail.com">germanferrerok@gmail.com</a></li>
-    </ul>
-    
+    <div class="contacto">
+      <p>
+        💼 <a class="archivo" href="https://www.linkedin.com/in/germanignacioferrer/" target="_blank">LinkedIn</a><br>
+        🧑‍💻 <a class="archivo" href="https://github.com/germanferrer" target="_blank">GitHub</a><br>
+        ✉️ <a class="archivo" href="mailto:germanferrerok@gmail.com">germanferrerok@gmail.com</a>
+      </p>
+    </div>
   </section>
 
 </body>
 </html>
-
