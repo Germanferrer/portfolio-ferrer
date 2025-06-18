@@ -36,17 +36,109 @@
       border-radius: 50%;
       object-fit: cover;
     }
+
+    nav {
+      background-color: #fff;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #007acc;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 30px 20px;
+    }
+
+    h2 {
+      color: #333;
+      border-left: 5px solid #007acc;
+      padding-left: 10px;
+    }
+
+    p, li {
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .galeria img {
+      width: 250px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .archivo {
+      display: block;
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
 
   <div class="header">
     <div>
-      <div class="titulo"><strong>Germanferrer</strong>/<strong>portfolio-ferrer</strong></div>
+      <div class="titulo"><strong>germanferrer</strong>/<strong>portfolio-ferrer</strong></div>
       <div class="descripcion">Portfolio de proyectos de ingeniería y diseño</div>
     </div>
     <img class="avatar" src="https://media.licdn.com/dms/image/v2/D4D03AQEXPSX1kp8Vfw/profile-displayphoto-shrink_400_400/B4DZX8gZTcGkAk-/0/1743698106302?e=1755734400&v=beta&t=m62Pt3zFer0V-EpIxzT17-gIpIJK0p55D4sP1KQMjhg" alt="German Ferrer">
   </div>
 
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#galeria">Fotos y Archivos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="sobre-mi">
+    <h2>📌 Sobre mí</h2>
+    <p>
+      Técnico electromecánico y estudiante avanzado de Ingeniería Industrial en la UTN FRH.
+      Mi enfoque está en la mejora continua de productos y procesos industriales, integrando herramientas de diseño, automatización y gestión.
+    </p>
+  </section>
+
+  <section id="proyectos">
+    <h2>🛠 Proyectos destacados</h2>
+    <ul>
+      <li><strong>Granalladora Automatizada:</strong> diseño, fabricación e integración.</li>
+      <li><strong>Sistema de aspiración de polvo:</strong> análisis, dimensionado y puesta en marcha.</li>
+      <li><strong>Básculas industriales:</strong> automatización y conexión con sistemas SCADA.</li>
+    </ul>
+  </section>
+
+  <section id="galeria">
+    <h2>📸 Fotos y Archivos</h2>
+
+    <h3>🔹 Proyecto: Granalladora</h3>
+    <div class="galeria">
+      <img src="assets/granalladora1.jpg" alt="Granalladora diseño">
+      <img src="assets/granalladora2.jpg" alt="Granalladora instalación">
+    </div>
+    <a class="archivo" href="docs/manual_granalladora.pdf" target="_blank">📄 Ver manual técnico</a>
+
+    <h3>🔹 Proyecto: Colector de polvo</h3>
+    <div class="galeria">
+      <img src="assets/colector1.jpg" alt="Colector armado">
+    </div>
+    <a class="archivo" href="docs/informe_colector.pdf" target="_blank">📄 Informe técnico</a>
+  </section>
+
+  <section id="contacto">
+    <h2>📬 Contacto</h2>
+    <p>Podés encontrarme en:</p>
+    <ul>
+      <li>💼 <a href="https://www.linkedin.com/in/germanignacioferrer/" target="_blank">LinkedIn</a></li>
+      <li>🧑‍💻 <a href="https://github.com/germanferrer" target="_blank">GitHub</a></li>
+      <li>📧 <a href="mailto:germanferrerok@gmail.com">germanferrerok@gmail.com</a></li>
+    </ul>
+  </section>
+
 </body>
 </html>
+
