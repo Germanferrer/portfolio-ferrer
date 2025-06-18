@@ -36,7 +36,7 @@ A continuación, se presentan imágenes y archivos seleccionados de algunos proy
 
 ## 🌐 Ver online
 
-➡️ [Mi portfolio publicado en GitHub Pages](https://germanferrer.github.io/portfolio-ferrer)
+➡️ [Mi portfolio publicado en GitHub Pages](https://germanferrer.github.io/project-portfolio)
 
 ## 📬 Contacto
 
