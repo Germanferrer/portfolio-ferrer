@@ -23,12 +23,15 @@
             color: #4a4a4a; /* Gris oscuro para el texto principal */
         }
 
-        /* Navegación (Nueva sección) */
+        /* Navegación */
         .nav-bar {
-            background-color: #007acc; /* Color azul para la barra de navegación */
+            background-color: #007acc; /* Color azul principal */
             padding: 10px 40px;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky; /* Hace la barra de navegación pegajosa al desplazarse */
+            top: 0; /* Se pega en la parte superior */
+            z-index: 1000; /* Asegura que esté por encima de otros elementos */
         }
 
         .nav-bar a {
@@ -37,14 +40,16 @@
             padding: 10px 20px;
             margin: 0 10px;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             font-size: 15px;
+            display: inline-block; /* Permite transformaciones y margenes */
         }
 
         .nav-bar a:hover {
             background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+            transform: translateY(-2px); /* Pequeño efecto de levantamiento */
         }
 
         /* Encabezado (Header) */
@@ -54,13 +59,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.08); /* Sombra sutil para darle profundidad */
-            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
-            gap: 20px; /* Espacio entre el texto y el avatar */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .header div {
-            flex-grow: 1; /* Permite que el contenedor de texto ocupe el espacio disponible */
+            flex-grow: 1;
         }
 
         .titulo {
@@ -68,7 +73,7 @@
             font-size: 28px;
             font-weight: 700;
             color: #333;
-            margin: 0; /* Elimina márgenes por defecto */
+            margin: 0;
         }
 
         .descripcion {
@@ -80,111 +85,124 @@
         .avatar {
             width: 100px;
             height: 100px;
-            border-radius: 50%; /* Hace la imagen circular */
-            object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
-            border: 3px solid #007acc; /* Borde azul alrededor del avatar */
-            flex-shrink: 0; /* Evita que el avatar se encoja en pantallas pequeñas */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #007acc; /* Borde un poco más grueso y notorio */
+            flex-shrink: 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Sombra para el avatar */
         }
 
         /* Secciones de Contenido */
         section {
-            padding: 40px 20px;
+            padding: 40px 25px; /* Ligeramente más padding horizontal */
             max-width: 900px;
-            margin: 25px auto; /* Centra las secciones y les da espacio */
+            margin: 35px auto; /* Más espacio entre secciones */
             background-color: #ffffff;
-            border-radius: 8px; /* Bordes ligeramente redondeados */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra suave para las secciones */
+            border-radius: 10px; /* Bordes un poco más redondeados */
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08); /* Sombra suave para las secciones */
         }
 
         h2 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 24px;
-            border-left: 5px solid #007acc; /* Borde azul a la izquierda del título */
-            padding-left: 15px;
+            font-size: 26px; /* Títulos un poco más grandes */
+            border-left: 6px solid #007acc; /* Borde azul más grueso */
+            padding-left: 18px; /* Más espacio a la izquierda */
             margin-top: 0;
-            margin-bottom: 30px;
-            color: #0056b3; /* Azul más oscuro para los títulos */
+            margin-bottom: 35px; /* Más espacio debajo del título */
+            color: #0056b3;
+            display: flex; /* Para alinear el ícono y el texto */
+            align-items: center;
+            gap: 10px; /* Espacio entre el ícono y el texto */
         }
 
         /* Proyectos Individuales */
         .proyecto {
-            background-color: #fcfcfc; /* Fondo ligeramente diferente para destacar proyectos */
-            border: 1px solid #eee;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            transition: transform 0.2s ease-in-out; /* Animación al pasar el ratón */
+            background-color: #fcfcfc;
+            border: 1px solid #e0e0e0; /* Borde un poco más visible */
+            border-radius: 10px; /* Bordes más redondeados */
+            padding: 25px; /* Más padding */
+            margin-bottom: 30px; /* Más espacio entre proyectos */
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06); /* Sombra suave */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
 
         .proyecto:hover {
-            transform: translateY(-5px); /* Efecto de "levantar" al pasar el ratón */
+            transform: translateY(-7px); /* Efecto de "levantar" más pronunciado */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12); /* Sombra más fuerte al pasar el ratón */
         }
 
         .proyecto h3 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 20px;
+            font-size: 22px; /* Título de proyecto más grande */
             color: #333;
             margin-top: 0;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+        }
+
+        .proyecto p {
+            font-size: 15px; /* Texto de descripción un poco más grande */
+            margin-bottom: 20px;
         }
 
         img.preview {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            margin-top: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra más pronunciada para las imágenes */
-            margin-bottom: 15px;
+            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra más pronunciada para las imágenes */
+            margin-bottom: 20px;
+            border: 1px solid #ddd; /* Borde sutil para las imágenes */
         }
 
         /* Estilo para los enlaces de documentos (como botones) */
         .archivo {
-            display: inline-block;
+            display: inline-flex; /* Usar flexbox para alinear icono y texto */
+            align-items: center; /* Centrar verticalmente */
+            gap: 8px; /* Espacio entre icono y texto */
             background-color: #007acc;
             color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
+            padding: 12px 20px; /* Más padding para los botones */
+            border-radius: 6px; /* Bordes ligeramente más redondeados */
             text-decoration: none;
-            font-size: 15px;
-            margin-top: 10px;
-            transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+            font-size: 16px; /* Botones un poco más grandes */
+            margin-top: 15px; /* Más espacio superior */
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .archivo:hover {
-            background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
-            text-decoration: none; /* Quita el subrayado al pasar el ratón */
+            background-color: #0056b3;
+            transform: translateY(-2px); /* Pequeño efecto de levantamiento */
+            text-decoration: none;
         }
         
-        .archivo i { /* Estilo para los iconos dentro de los enlaces */
-            margin-right: 8px;
-        }
-
         /* Sección de Contacto */
         .contacto p {
-            line-height: 2.2; /* Más espacio entre los enlaces de contacto */
+            line-height: 2.5; /* Más espacio entre los enlaces de contacto */
         }
         .contacto .archivo {
-            background-color: transparent; /* Fondo transparente para los enlaces de contacto */
-            color: #007acc; /* Color azul para el texto */
+            background-color: transparent;
+            color: #007acc;
             padding: 0;
             margin: 0;
             border-radius: 0;
-            text-decoration: underline; /* Subrayado por defecto */
-            font-size: 16px; /* Un poco más grande para el contacto */
+            text-decoration: underline;
+            font-size: 17px; /* Un poco más grande para el contacto */
+            font-weight: 500; /* Ligeramente más negrita */
+            border: none; /* Elimina cualquier borde residual */
         }
         .contacto .archivo:hover {
             color: #0056b3;
-            text-decoration: none; /* Quitar subrayado al pasar el ratón */
+            text-decoration: none;
+            transform: none; /* Deshabilita el efecto de levantamiento para enlaces de contacto */
         }
 
         /* Pie de Página (Footer) */
         footer {
             text-align: center;
-            padding: 25px 20px;
-            font-size: 13px;
-            color: #888;
-            margin-top: 50px;
+            padding: 30px 20px; /* Más padding en el footer */
+            font-size: 14px; /* Un poco más grande */
+            color: #777; /* Gris un poco más claro */
+            margin-top: 60px; /* Más margen superior */
             background-color: white;
             border-top: 1px solid #eee;
         }
@@ -192,59 +210,88 @@
         /* --- Media Queries para Diseño Responsive --- */
         @media (max-width: 768px) {
             .nav-bar {
-                padding: 10px 20px;
+                padding: 10px 15px;
             }
+            .nav-bar a {
+                padding: 8px 15px;
+                font-size: 14px;
+                margin: 0 5px;
+            }
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px 20px;
+            }
+            .header div {
+                margin-bottom: 15px;
+            }
+            .titulo {
+                font-size: 26px;
+            }
+            .descripcion {
+                font-size: 15px;
+            }
+            .avatar {
+                width: 90px;
+                height: 90px;
+            }
+            section {
+                padding: 30px 20px;
+                margin: 25px auto;
+            }
+            h2 {
+                font-size: 22px;
+                margin-bottom: 25px;
+            }
+            .proyecto {
+                padding: 20px;
+                margin-bottom: 25px;
+            }
+            .proyecto h3 {
+                font-size: 20px;
+            }
+            .archivo {
+                display: flex; /* Cambiar a flex para centrar mejor en móvil */
+                justify-content: center; /* Centrar contenido */
+                width: 90%; /* Ocupar casi todo el ancho */
+                max-width: 250px; /* Ancho máximo para que no sea demasiado largo */
+                margin: 15px auto 0; /* Centrar y más espacio */
+                padding: 10px 15px;
+                font-size: 15px;
+            }
+            .contacto .archivo {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
             .nav-bar a {
                 display: block; /* Cada enlace en su propia línea */
                 margin: 5px 0; /* Espacio vertical entre enlaces */
             }
-            .header {
-                flex-direction: column; /* Apila los elementos del header en pantallas pequeñas */
-                text-align: center;
-                padding: 20px;
-            }
-            .header div {
-                margin-bottom: 15px; /* Espacio entre el texto y el avatar apilados */
-            }
             .titulo {
-                font-size: 24px;
+                font-size: 22px;
             }
             .descripcion {
                 font-size: 14px;
             }
             .avatar {
-                width: 80px;
-                height: 80px;
-            }
-            section {
-                padding: 25px 15px; /* Menos padding en móviles */
-                margin: 20px auto;
+                width: 75px;
+                height: 75px;
             }
             h2 {
                 font-size: 20px;
-                margin-bottom: 20px;
+                gap: 8px;
             }
-            .proyecto {
-                padding: 15px;
-            }
-            .archivo {
-                display: block; /* Los botones de archivo ocupan todo el ancho disponible */
-                width: fit-content; /* Se ajusta al contenido */
-                margin: 10px auto 0; /* Centrar y más espacio */
-                text-align: center; /* Centrar texto en el botón */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .titulo {
-                font-size: 20px;
-            }
-            .descripcion {
-                font-size: 13px;
+            .proyecto h3 {
+                font-size: 18px;
             }
             .archivo {
                 font-size: 14px;
-                padding: 8px 12px;
+                padding: 10px 15px;
+            }
+            .contacto .archivo {
+                font-size: 15px;
             }
         }
     </style>
@@ -266,34 +313,36 @@
     </nav>
 
     <section id="sobre-mi">
-        <h2>👨‍💻 Sobre mí</h2>
-        <p>Titulado como Técnico en Electromecánico, me encuentro promediando la carrera de Ingeniería Industrial en UTN FRH. Mi enfoque se centra en la gestion de proyectos para la mejora continua de productos y procesos.</p>
+        <h2><i class="fas fa-user-circle"></i> Sobre mí</h2>
+        <p>Titulado como **Técnico en Electromecánico**, me encuentro promediando la carrera de **Ingeniería Industrial en UTN FRH**. Mi enfoque se centra en la **gestión de proyectos** para la mejora continua de productos y procesos, siempre buscando la eficiencia y la innovación.</p>
     </section>
 
     <section id="proyectos">
-        <h2>⚙️ Proyectos</h2>
+        <h2><i class="fas fa-hard-hat"></i> Proyectos</h2>
 
         <div class="proyecto">
             <h3>Granalladora automatizada</h3>
-            <p>Diseño y puesta en marcha de equipo de granallado con sistema automatizado.</p>
+            <p>**Diseño y puesta en marcha** de un equipo de granallado con sistema automatizado. Este proyecto incluyó la definición de especificaciones técnicas, la selección de componentes y la supervisión de la instalación para asegurar un proceso eficiente y seguro.</p>
             <img class="preview" src="https://github.com/Germanferrer/project-portfolio/blob/main/ganchera-1516-tos-3x10-1.jpg?raw=true" alt="Granalladora">
             <a class="archivo" href="https://github.com/Germanferrer/project-portfolio/blob/main/ganchera-1516-tos-3x10-1.jpg?raw=true" target="_blank"><i class="fas fa-file-alt"></i> Ver manual técnico</a>
         </div>
 
         <div class="proyecto">
             <h3>Colector de polvo</h3>
-            <p>Desarrollo y supervisión del sistema de captación de partículas en ambiente industrial.</p>
+            <p>**Desarrollo y supervisión** del sistema de captación de partículas en un ambiente industrial. Me encargué de analizar las necesidades del entorno, diseñar la solución más adecuada y coordinar su implementación para mejorar la calidad del aire y la seguridad en el lugar de trabajo.</p>
             <img class="preview" src="https://github.com/Germanferrer/project-portfolio/blob/main/COLECTOR-PLANTA-DE-CHANCADO-ANTAPACCAY.jpg?raw=true" alt="Colector de polvo">
             <a class="archivo" href="https://github.com/Germanferrer/project-portfolio/blob/main/docs/informe_colector.pdf?raw=true" target="_blank"><i class="fas fa-file-alt"></i> Ver informe técnico</a>
         </div>
     </section>
 
     <section id="contacto">
-        <h2>📧 Contacto</h2>
+        <h2><i class="fas fa-paper-plane"></i> Contacto</h2>
         <div class="contacto">
             <p>
-                <a class="archivo" href="https://www.linkedin.com/in/germanignacioferrer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
-                <a class="archivo" href="https://github.com/germanferrer" target="_blank"><i class="fab fa-github"></i> GitHub</a><br>
+                No dudes en contactarme a través de mis redes o correo electrónico:
+                <br>
+                <a class="archivo" href="https://www.linkedin.com/in/germanignacioferrer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a class="archivo" href="https://github.com/germanferrer" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a class="archivo" href="mailto:germanferrer57@gmail.com"><i class="fas fa-envelope"></i> germanferrer57@gmail.com</a>
             </p>
         </div>
