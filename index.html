@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> German Ferrer | Portfolio de Proyectos </title>
+    <title>German Ferrer | Portafolio de Proyectos</title>
     <link rel="icon" type="image/png" href="https://github.com/Germanferrer/project-portfolio/blob/main/avatarurl.png?raw=true">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +18,7 @@
         /* Estilos Generales */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f0f4f8; /* Un gris azulado suave */
+            background-color: #e0f7fa; /* Un celeste muy claro */
             margin: 0;
             padding: 0;
             line-height: 1.6;
@@ -26,99 +28,98 @@
 
         /* Navegación */
         .nav-bar {
-            background-color: #263238; /* Un gris oscuro */
-            padding: 10px 40px;
+            background-color: rgba(38, 50, 56, 0.9); /* Gris oscuro semitransparente */
+            padding: 15px 40px; /* Aumentar un poco el padding */
             text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Sombra más pronunciada */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra sutil */
             position: sticky;
             top: 0;
             z-index: 1000;
             transition: background-color 0.3s ease;
-            height: 60px; /* Definir una altura fija para la barra de navegación */
+            height: auto; /* Ajustar altura automáticamente */
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap; /* Para que los enlaces se envuelvan en pantallas pequeñas */
         }
 
         .nav-bar a {
-            color: #b0bec5; /* Un gris azulado claro */
+            color: #eceff1; /* Gris muy claro */
             text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            border-radius: 5px;
+            padding: 12px 20px; /* Aumentar padding */
+            margin: 5px 10px; /* Reducir margen vertical */
+            border-radius: 8px; /* Bordes más redondeados */
             transition: background-color 0.3s ease-out, transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.3s ease; /* Transición más suave */
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 15px;
+            font-size: 16px; /* Aumentar tamaño fuente */
             display: inline-block;
         }
 
         .nav-bar a:hover {
-            background-color: #37474f; /* Gris oscuro al pasar el ratón */
-            color: #eceff1; /* Gris muy claro al pasar el ratón */
-            transform: translateY(-3px) scale(1.02); /* Efecto de levantamiento y pequeño crecimiento */
+            background-color: rgba(55, 71, 79, 0.8); /* Gris oscuro más claro al pasar el ratón, también semitransparente */
+            color: #fff; /* Blanco al pasar el ratón */
+            transform: translateY(-2px) scale(1.01); /* Efecto sutil de elevación */
         }
 
         /* Encabezado (Header) */
         .header {
-            background-color: #eceff1; /* Un gris muy claro */
-            padding: 30px 40px;
+            background-color: #fff; /* Fondo blanco */
+            padding: 40px 40px; /* Aumentar padding */
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Sombra más fuerte */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Sombra más suave y definida */
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 30px; /* Aumentar espacio entre elementos */
             transition: background-color 0.3s ease;
             animation: fadeIn 1s ease-out; /* Animación de aparición */
         }
 
         .titulo {
             font-family: 'Montserrat', sans-serif;
-            font-size: 28px;
+            font-size: 32px; /* Aumentar tamaño fuente */
             font-weight: 700;
             color: #263238; /* Gris oscuro */
             margin: 0;
             transition: color 0.3s ease;
-            flex-grow: 1; /* Permite que el título ocupe espacio y empuje al avatar */
+            flex-grow: 1; /* Permite que el título ocupe espacio */
         }
 
         .descripcion {
-            font-size: 16px;
+            font-size: 18px; /* Aumentar tamaño fuente */
             color: #546e7a; /* Un gris azulado más suave */
-            margin-top: 5px;
+            margin-top: 10px;
             transition: color 0.3s ease;
         }
 
         .avatar {
-            width: 100px;
-            height: 100px;
+            width: 120px; /* Aumentar tamaño avatar */
+            height: 120px; /* Aumentar tamaño avatar */
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #546e7a; /* Borde gris azulado */
+            border: 3px solid #80cbc4; /* Un verde azulado como acento */
             flex-shrink: 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Sombra más marcada para el avatar */
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* Sombra suave para el avatar */
             transition: border-color 0.3s ease, transform 0.3s ease-out;
         }
 
         .avatar:hover {
-            transform: scale(1.05) rotate(2deg); /* Pequeña rotación y crecimiento en hover */
+            transform: scale(1.08) rotate(3deg); /* Efecto más pronunciado al pasar el ratón */
         }
 
         /* Secciones de Contenido */
         section {
-            padding: 40px 25px;
-            max-width: 900px;
-            margin: 35px auto;
-            background-color: #fff; /* Blanco para las secciones */
-            border-radius: 12px; /* Bordes más redondeados */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra más definida */
+            padding: 50px 30px; /* Aumentar padding */
+            max-width: 960px; /* Ancho máximo un poco mayor */
+            margin: 40px auto; /* Aumentar margen */
+            background-color: rgba(255, 255, 255, 0.95); /* Blanco ligeramente transparente */
+            border-radius: 15px; /* Bordes más redondeados */
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Sombra suave */
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
             animation: slideInUp 0.8s ease-out forwards; /* Animación de aparición */
             opacity: 0; /* Inicialmente oculto para la animación */
-
-            /* IMPORTANTE: Ajuste para el desplazamiento con la barra fija */
-            scroll-margin-top: 80px; /* Un poco más que la altura de la barra de navegación para un mejor espaciado */
+            scroll-margin-top: 80px; /* Ajuste para el desplazamiento con la barra fija */
         }
 
         section:nth-of-type(1) { animation-delay: 0.1s; }
@@ -130,60 +131,60 @@
 
         h2 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 26px;
-            border-left: 6px solid #546e7a; /* Borde gris azulado */
-            padding-left: 18px;
+            font-size: 30px; /* Aumentar tamaño fuente */
+            border-left: 8px solid #80cbc4; /* Borde verde azulado */
+            padding-left: 20px;
             margin-top: 0;
-            margin-bottom: 35px;
+            margin-bottom: 40px; /* Aumentar margen inferior */
             color: #263238; /* Gris oscuro */
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px; /* Aumentar espacio entre icono y texto */
             transition: border-color 0.3s ease, color 0.3s ease;
         }
 
         /* Proyectos Individuales */
         .proyecto {
-            background-color: #f9f9f9; /* Gris muy claro para los proyectos */
-            border: 1px solid #e0e0e0; /* Un gris más oscuro */
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08); /* Sombra más definida */
+            background-color: #fff; /* Fondo blanco */
+            border: 1px solid #e0e0e0; /* Un gris más claro */
+            border-radius: 12px; /* Bordes más redondeados */
+            padding: 30px; /* Aumentar padding */
+            margin-bottom: 35px; /* Aumentar margen inferior */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Sombra muy suave */
             transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease-in-out, background-color 0.3s ease, border-color 0.3s ease;
         }
 
         .proyecto:hover {
-            transform: translateY(-10px) scale(1.01); /* Efecto de "levantar" más pronunciado y leve crecimiento */
-            box-shadow: 0 12px 24px rgba(0,0,0,0.18); /* Sombra más fuerte al pasar el ratón */
-            background-color: #f3f3f3; /* Un gris ligeramente más oscuro al pasar el ratón */
-            border-color: #c0c0c0; /* Borde más oscuro al pasar el ratón */
+            transform: translateY(-5px) scale(1.02); /* Efecto de "levantar" sutil */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Sombra más definida al pasar el ratón */
+            border-color: #b2dfdb; /* Borde verde azulado más claro al pasar el ratón */
         }
 
         .proyecto h3 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 22px;
+            font-size: 24px; /* Aumentar tamaño fuente */
             color: #263238; /* Gris oscuro */
             margin-top: 0;
-            margin-bottom: 12px;
+            margin-bottom: 15px; /* Aumentar margen inferior */
             transition: color 0.3s ease;
         }
 
         .proyecto p {
-            font-size: 15px;
-            margin-bottom: 20px;
+            font-size: 16px;
+            margin-bottom: 25px; /* Aumentar margen inferior */
             color: #455a64; /* Un gris azulado oscuro */
             transition: color 0.3s ease;
+            line-height: 1.7; /* Mejorar la legibilidad */
         }
 
         img.preview {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            margin-top: 10px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* Sombra más pronunciada para las imágenes */
-            margin-bottom: 20px;
-            border: 1px solid #cfd8dc; /* Borde sutil para las imágenes */
+            border-radius: 10px; /* Bordes redondeados para las imágenes */
+            margin-top: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Sombra suave para las imágenes */
+            margin-bottom: 25px; /* Aumentar margen inferior */
+            border: 1px solid #e0e0e0; /* Borde sutil para las imágenes */
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -191,42 +192,43 @@
         .archivo {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background-color: #546e7a; /* Gris azulado */
+            gap: 10px; /* Aumentar espacio entre icono y texto */
+            background-color: #80cbc4; /* Verde azulado */
             color: white;
-            padding: 12px 20px;
-            border-radius: 6px;
+            padding: 14px 24px; /* Aumentar padding */
+            border-radius: 8px; /* Bordes más redondeados */
             text-decoration: none;
             font-size: 16px;
-            margin-top: 15px;
+            margin-top: 20px; /* Aumentar margen superior */
             transition: background-color 0.3s ease-out, transform 0.2s ease-out, box-shadow 0.3s ease-out;
         }
 
         .archivo:hover {
-            background-color: #37474f; /* Gris oscuro al pasar el ratón */
-            transform: translateY(-3px) scale(1.02); /* Pequeño efecto de levantamiento y crecimiento */
-            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            background-color: #4db6ac; /* Verde azulado más oscuro al pasar el ratón */
+            transform: translateY(-3px) scale(1.01); /* Efecto de levantamiento sutil */
+            box-shadow: 0 5px 10px rgba(0,0,0,0.15);
             text-decoration: none;
         }
 
         /* Sección de Contacto */
         .contacto p {
-            line-height: 2.5;
+            line-height: 2; /* Reducir un poco el espaciado */
+            font-size: 17px; /* Aumentar ligeramente la fuente */
         }
         .contacto .archivo {
             background-color: transparent;
-            color: #546e7a; /* Gris azulado */
+            color: #80cbc4; /* Verde azulado */
             padding: 0;
-            margin: 0;
+            margin: 10px 0; /* Añadir un poco de margen vertical */
             border-radius: 0;
             text-decoration: underline;
-            font-size: 17px;
+            font-size: 18px; /* Aumentar tamaño fuente */
             font-weight: 500;
             border: none;
             transition: color 0.3s ease, transform 0.2s ease-out;
         }
         .contacto .archivo:hover {
-            color: #263238; /* Gris oscuro al pasar el ratón */
+            color: #4db6ac; /* Verde azulado más oscuro al pasar el ratón */
             text-decoration: none;
             transform: translateX(5px); /* Pequeño desplazamiento hacia la derecha */
         }
@@ -237,36 +239,37 @@
             padding: 0;
             display: flex;
             flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-            gap: 10px; /* Espacio entre los elementos */
-            margin-bottom: 20px;
+            gap: 12px; /* Aumentar espacio entre elementos */
+            margin-bottom: 30px; /* Aumentar margen inferior */
         }
 
         .skills-list li, .cert-list li {
-            background-color: #eceff1; /* Fondo gris claro para cada elemento */
+            background-color: #e0f7fa; /* Fondo celeste claro */
             color: #37474f; /* Texto gris oscuro */
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 15px;
+            padding: 10px 18px; /* Aumentar padding */
+            border-radius: 8px; /* Bordes más redondeados */
+            font-size: 16px; /* Aumentar tamaño fuente */
             font-weight: 500;
-            border: 1px solid #cfd8dc; /* Borde sutil */
+            border: 1px solid #b2dfdb; /* Borde verde azulado claro */
             transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .skills-list li:hover, .cert-list li:hover {
-            background-color: #cfd8dc; /* Fondo ligeramente más oscuro al pasar el ratón */
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #b2dfdb; /* Fondo verde azulado claro al pasar el ratón */
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
         }
 
         /* Pie de Página (Footer) */
         footer {
             text-align: center;
-            padding: 30px 20px;
-            font-size: 14px;
+            padding: 40px 20px; /* Aumentar padding */
+            font-size: 15px; /* Aumentar tamaño fuente */
             color: #78909c; /* Un gris azulado más claro */
-            margin-top: 60px;
-            background-color: #eceff1; /* Gris muy claro */
-            border-top: 1px solid #cfd8dc; /* Un gris azulado muy claro */
+            margin-top: 70px; /* Aumentar margen superior */
+            background-color: #e0f7fa; /* Fondo celeste claro */
+            border-top: 1px solid #b2dfdb; /* Un verde azulado muy claro */
+            border-radius: 0 0 15px 15px; /* Redondear solo la parte inferior */
             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
 
@@ -291,57 +294,88 @@
         /* --- Media Queries para Diseño Responsive --- */
         @media (max-width: 768px) {
             .nav-bar {
-                padding: 10px 15px;
-                height: auto; /* Dejar que la altura se ajuste en móviles */
-                flex-wrap: wrap; /* Permite que los enlaces se envuelvan */
+                padding: 15px 20px;
             }
             .nav-bar a {
-                padding: 8px 15px;
-                font-size: 14px;
-                margin: 0 5px;
+                padding: 10px 15px;
+                font-size: 15px;
+                margin: 5px;
             }
             .header {
                 flex-direction: column;
                 text-align: center;
-                padding: 25px 20px;
+                padding: 30px 20px;
             }
             .header div {
-                margin-bottom: 15px;
+                margin-bottom: 20px;
             }
             .titulo {
-                font-size: 26px;
+                font-size: 28px;
             }
             .descripcion {
-                font-size: 15px;
+                font-size: 16px;
             }
             .avatar {
-                width: 90px;
-                height: 90px;
+                width: 100px;
+                height: 100px;
             }
             section {
-                padding: 30px 20px;
-                margin: 25px auto;
-                scroll-margin-top: 120px; /* Ajuste para móviles si la nav-bar se vuelve más alta */
+                padding: 40px 20px;
+                margin: 30px auto;
+                scroll-margin-top: 70px; /* Ajuste para móviles */
             }
             h2 {
-                font-size: 22px;
-                margin-bottom: 25px;
+                font-size: 24px;
+                margin-bottom: 30px;
             }
             .proyecto {
-                padding: 20px;
-                margin-bottom: 25px;
+                padding: 25px;
+                margin-bottom: 30px;
             }
             .proyecto h3 {
                 font-size: 20px;
             }
             .archivo {
-                display: flex;
-                justify-content: center;
-                width: 90%;
-                max-width: 250px;
-                margin: 15px auto 0;
-                padding: 10px 15px;
                 font-size: 15px;
+                padding: 12px 20px;
+            }
+            .contacto .archivo {
+                font-size: 17px;
+            }
+            .skills-list li, .cert-list li {
+                font-size: 15px;
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-bar {
+                padding: 10px 15px;
+            }
+            .nav-bar a {
+                display: block;
+                margin: 8px 0;
+            }
+            .titulo {
+                font-size: 24px;
+            }
+            .descripcion {
+                font-size: 15px;
+            }
+            .avatar {
+                width: 80px;
+                height: 80px;
+            }
+            h2 {
+                font-size: 22px;
+                gap: 10px;
+            }
+            .proyecto h3 {
+                font-size: 19px;
+            }
+            .archivo {
+                font-size: 14px;
+                padding: 10px 15px;
             }
             .contacto .archivo {
                 font-size: 16px;
@@ -349,41 +383,6 @@
             .skills-list li, .cert-list li {
                 font-size: 14px;
                 padding: 6px 12px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .nav-bar a {
-                display: block;
-                margin: 5px 0;
-            }
-            .titulo {
-                font-size: 22px;
-            }
-            .descripcion {
-                font-size: 14px;
-            }
-            .avatar {
-                width: 75px;
-                height: 75px;
-            }
-            h2 {
-                font-size: 20px;
-                gap: 8px;
-            }
-            .proyecto h3 {
-                font-size: 18px;
-            }
-            .archivo {
-                font-size: 14px;
-                padding: 10px 15px;
-            }
-            .contacto .archivo {
-                font-size: 15px;
-            }
-            .skills-list li, .cert-list li {
-                font-size: 13px;
-                padding: 5px 10px;
             }
         }
     </style>
@@ -399,11 +398,11 @@
     </div>
 
     <nav class="nav-bar">
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#certificaciones">Certificaciones</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#sobre-mi"><i class="fas fa-user"></i> Sobre mí</a>
+        <a href="#proyectos"><i class="fas fa-code"></i> Proyectos</a>
+        <a href="#certificaciones"><i class="fas fa-award"></i> Certificaciones</a>
+        <a href="#habilidades"><i class="fas fa-tools"></i> Habilidades</a>
+        <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
     </nav>
 
     <section id="sobre-mi">
@@ -455,12 +454,11 @@
     <section id="contacto">
         <h2><i class="fas fa-paper-plane"></i> Contacto</h2>
         <div class="contacto">
-                <br>
-                <a class="archivo" href="https://www.linkedin.com/in/germanignacioferrer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a class="archivo" href="https://github.com/germanferrer" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a class="archivo" href="mailto:germanferrer57@gmail.com"><i class="fas fa-envelope"></i> germanferrer57@gmail.com</a>
-            </p>
-        </div>
+             <br>
+             <a class="archivo" href="https://www.linkedin.com/in/germanignacioferrer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+             <a class="archivo" href="https://github.com/germanferrer" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+             <a class="archivo" href="mailto:germanferrer57@gmail.com"><i class="fas fa-envelope"></i> germanferrer57@gmail.com</a>
+         </div>
     </section>
 
     <footer>
