@@ -1,130 +1,270 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Ferrer Project portfolio </title>
-  <link rel="icon" type="image/png" href="https://github.com/Germanferrer/project-portfolio/blob/main/avatarurl.png?raw=true">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f4f8;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German Ferrer | Portafolio de Proyectos</title>
+    <link rel="icon" type="image/png" href="https://github.com/Germanferrer/project-portfolio/blob/main/avatarurl.png?raw=true">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    .header {
-      background-color: white;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #ccc;
-    }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    .titulo {
-      font-size: 22px;
-    }
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafd; /* Fondo blanco azulado muy suave */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #4a4a4a; /* Gris oscuro para el texto principal */
+        }
 
-    .descripcion {
-      font-size: 14px;
-      color: #666;
-    }
+        /* Encabezado (Header) */
+        .header {
+            background-color: white;
+            padding: 30px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08); /* Sombra sutil para darle profundidad */
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+            gap: 20px; /* Espacio entre el texto y el avatar */
+        }
 
-    .avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
+        .header div {
+            flex-grow: 1; /* Permite que el contenedor de texto ocupe el espacio disponible */
+        }
 
-    section {
-      padding: 30px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
+        .titulo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+            margin: 0; /* Elimina márgenes por defecto */
+        }
 
-    h2 {
-      font-size: 18px;
-      border-left: 4px solid #007acc;
-      padding-left: 10px;
-      margin-top: 40px;
-      color: #007acc;
-    }
+        .descripcion {
+            font-size: 16px;
+            color: #666;
+            margin-top: 5px;
+        }
 
-    .proyecto, .contacto {
-      margin-bottom: 20px;
-    }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Hace la imagen circular */
+            object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+            border: 3px solid #007acc; /* Borde azul alrededor del avatar */
+            flex-shrink: 0; /* Evita que el avatar se encoja en pantallas pequeñas */
+        }
 
-    .proyecto h3 {
-      margin: 10px 0 5px;
-    }
+        /* Secciones de Contenido */
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 25px auto; /* Centra las secciones y les da espacio */
+            background-color: #ffffff;
+            border-radius: 8px; /* Bordes ligeramente redondeados */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra suave para las secciones */
+        }
 
-    .archivo {
-      display: inline-block;
-      margin-top: 4px;
-      font-size: 14px;
-      color: #007acc;
-      text-decoration: none;
-    }
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            border-left: 5px solid #007acc; /* Borde azul a la izquierda del título */
+            padding-left: 15px;
+            margin-top: 0;
+            margin-bottom: 30px;
+            color: #0056b3; /* Azul más oscuro para los títulos */
+        }
 
-    .archivo:hover {
-      text-decoration: underline;
-    }
+        /* Proyectos Individuales */
+        .proyecto {
+            background-color: #fcfcfc; /* Fondo ligeramente diferente para destacar proyectos */
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease-in-out; /* Animación al pasar el ratón */
+        }
 
-    img.preview {
-      max-width: 100%;
-      height: auto;
-      border-radius: 6px;
-      margin-top: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-  </style>
+        .proyecto:hover {
+            transform: translateY(-5px); /* Efecto de "levantar" al pasar el ratón */
+        }
+
+        .proyecto h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        img.preview {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra más pronunciada para las imágenes */
+            margin-bottom: 15px;
+        }
+
+        /* Estilo para los enlaces de documentos (como botones) */
+        .archivo {
+            display: inline-block;
+            background-color: #007acc;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 15px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+        }
+
+        .archivo:hover {
+            background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+            text-decoration: none; /* Quita el subrayado al pasar el ratón */
+        }
+        
+        .archivo i { /* Estilo para los iconos dentro de los enlaces */
+            margin-right: 8px;
+        }
+
+        /* Sección de Contacto */
+        .contacto p {
+            line-height: 2.2; /* Más espacio entre los enlaces de contacto */
+        }
+        .contacto .archivo {
+            background-color: transparent; /* Fondo transparente para los enlaces de contacto */
+            color: #007acc; /* Color azul para el texto */
+            padding: 0;
+            margin: 0;
+            border-radius: 0;
+            text-decoration: underline; /* Subrayado por defecto */
+            font-size: 16px; /* Un poco más grande para el contacto */
+        }
+        .contacto .archivo:hover {
+            color: #0056b3;
+            text-decoration: none; /* Quitar subrayado al pasar el ratón */
+        }
+
+        /* Pie de Página (Footer) */
+        footer {
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 13px;
+            color: #888;
+            margin-top: 50px;
+            background-color: white;
+            border-top: 1px solid #eee;
+        }
+
+        /* --- Media Queries para Diseño Responsive --- */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column; /* Apila los elementos del header en pantallas pequeñas */
+                text-align: center;
+                padding: 20px;
+            }
+            .header div {
+                margin-bottom: 15px; /* Espacio entre el texto y el avatar apilados */
+            }
+            .titulo {
+                font-size: 24px;
+            }
+            .descripcion {
+                font-size: 14px;
+            }
+            .avatar {
+                width: 80px;
+                height: 80px;
+            }
+            section {
+                padding: 25px 15px; /* Menos padding en móviles */
+                margin: 20px auto;
+            }
+            h2 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            .proyecto {
+                padding: 15px;
+            }
+            .archivo {
+                display: block; /* Los botones de archivo ocupan todo el ancho disponible */
+                width: fit-content; /* Se ajusta al contenido */
+                margin: 10px auto 0; /* Centrar y más espacio */
+                text-align: center; /* Centrar texto en el botón */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo {
+                font-size: 20px;
+            }
+            .descripcion {
+                font-size: 13px;
+            }
+            .archivo {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <div class="header">
-    <div>
-      <div class="titulo"><strong>Germanferrer</strong>/<strong>portfolio-ferrer</strong></div>
-      <div class="descripcion">Portfolio de proyectos de ingeniería y diseño</div>
-    </div>
-    <img class="avatar" src="https://media.licdn.com/dms/image/v2/D4D03AQEXPSX1kp8Vfw/profile-displayphoto-shrink_400_400/B4DZX8gZTcGkAk-/0/1743698106302?e=1755734400&v=beta&t=m62Pt3zFer0V-EpIxzT17-gIpIJK0p55D4sP1KQMjhg" alt="German Ferrer">
-  </div>
-
-  <section>
-    <h2>📌 Sobre mí</h2>
-    <p>Técnico electromecánico y estudiante de Ingeniería Industrial en UTN FRH. Me especializo en la mejora de productos y procesos mediante diseño técnico, automatización y gestión.</p>
-  </section>
-
-  <section>
-    <h2>🛠 Proyectos</h2>
-
-    <div class="proyecto">
-      <h3>Granalladora automatizada</h3>
-      <p>Diseño y puesta en marcha de equipo de granallado con sistema automatizado.</p>
-      <img class="preview" src="ganchera-1516-tos-3x10-1.jpg" alt="Granalladora">
-      <a class="archivo" href="https://github.com/Germanferrer/project-portfolio/blob/main/ganchera-1516-tos-3x10-1.jpg?raw=true" target="_blank">📄 Ver manual técnico</a>
+    <div class="header">
+        <div>
+            <div class="titulo"><strong>Germanferrer</strong>/<strong>portfolio-ferrer</strong></div>
+            <div class="descripcion">Portfolio de proyectos de ingeniería y diseño</div>
+        </div>
+        <img class="avatar" src="https://media.licdn.com/dms/image/v2/D4D03AQEXPSX1kp8Vfw/profile-displayphoto-shrink_400_400/B4DZX8gZTcGkAk-/0/1743698106302?e=1755734400&v=beta&t=m62Pt3zFer0V-EpIxzT17-gIpIJK0p55D4sP1KQMjhg" alt="German Ferrer">
     </div>
 
-    <div class="proyecto">
-      <h3>Colector de polvo</h3>
-      <p>Desarrollo y supervisión del sistema de captación de partículas en ambiente industrial.</p>
-      <img class="preview" src="https://github.com/Germanferrer/project-portfolio/blob/main/COLECTOR-PLANTA-DE-CHANCADO-ANTAPACCAY.jpg?raw=true" alt="Colector de polvo">
-      <a class="archivo" href="docs/informe_colector.pdf" target="_blank">📄 Ver informe técnico</a>
-    </div>
-  </section>
+    <section>
+        <h2>📌 Sobre mí</h2>
+        <p>Técnico electromecánico y estudiante de Ingeniería Industrial en UTN FRH. Me especializo en la mejora de productos y procesos mediante diseño técnico, automatización y gestión.</p>
+    </section>
 
-  <section>
-    <h2>📬 Contacto</h2>
-    <div class="contacto">
-      <p>
-        💼 <a class="archivo" href="https://www.linkedin.com/in/germanignacioferrer/" target="_blank">LinkedIn</a><br>
-        💼 <a class="archivo" href="https://github.com/germanferrer" target="_blank">GitHub</a><br>
-        💼 <a class="archivo" href="mailto:germanferrerok@gmail.com">germanferrer57@gmail.com</a>
-      </p>
-    </div>
-  </section>
+    <section>
+        <h2>🛠 Proyectos</h2>
+
+        <div class="proyecto">
+            <h3>Granalladora automatizada</h3>
+            <p>Diseño y puesta en marcha de equipo de granallado con sistema automatizado.</p>
+            <img class="preview" src="https://github.com/Germanferrer/project-portfolio/blob/main/ganchera-1516-tos-3x10-1.jpg?raw=true" alt="Granalladora">
+            <a class="archivo" href="https://github.com/Germanferrer/project-portfolio/blob/main/ganchera-1516-tos-3x10-1.jpg?raw=true" target="_blank"><i class="fas fa-file-alt"></i> Ver manual técnico</a>
+        </div>
+
+        <div class="proyecto">
+            <h3>Colector de polvo</h3>
+            <p>Desarrollo y supervisión del sistema de captación de partículas en ambiente industrial.</p>
+            <img class="preview" src="https://github.com/Germanferrer/project-portfolio/blob/main/COLECTOR-PLANTA-DE-CHANCADO-ANTAPACCAY.jpg?raw=true" alt="Colector de polvo">
+            <a class="archivo" href="https://github.com/Germanferrer/project-portfolio/blob/main/docs/informe_colector.pdf?raw=true" target="_blank"><i class="fas fa-file-alt"></i> Ver informe técnico</a>
+        </div>
+    </section>
+
+    <section>
+        <h2>📬 Contacto</h2>
+        <div class="contacto">
+            <p>
+                <a class="archivo" href="https://www.linkedin.com/in/germanignacioferrer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+                <a class="archivo" href="https://github.com/germanferrer" target="_blank"><i class="fab fa-github"></i> GitHub</a><br>
+                <a class="archivo" href="mailto:germanferrer57@gmail.com"><i class="fas fa-envelope"></i> germanferrer57@gmail.com</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 German Ferrer. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
