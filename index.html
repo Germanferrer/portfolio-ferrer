@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>German Ferrer | Portafolio de Proyectos</title>
     <link rel="icon" type="image/png" href="https://github.com/Germanferrer/project-portfolio/blob/main/avatarurl.png?raw=true">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -16,52 +16,56 @@
         /* Estilos Generales */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f8fafd; /* Fondo blanco azulado muy suave */
+            background-color: #f0f4f8; /* Un gris azulado suave */
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            color: #4a4a4a; /* Gris oscuro para el texto principal */
+            color: #37474f; /* Un gris más oscuro y neutro */
+            transition: background-color 0.3s ease;
         }
 
         /* Navegación */
         .nav-bar {
-            background-color: #007acc; /* Color azul principal */
+            background-color: #263238; /* Un gris oscuro */
             padding: 10px 40px;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky; /* Hace la barra de navegación pegajosa al desplazarse */
-            top: 0; /* Se pega en la parte superior */
-            z-index: 1000; /* Asegura que esté por encima de otros elementos */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
         }
 
         .nav-bar a {
-            color: white;
+            color: #b0bec5; /* Un gris azulado claro */
             text-decoration: none;
             padding: 10px 20px;
             margin: 0 10px;
             border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             font-size: 15px;
-            display: inline-block; /* Permite transformaciones y margenes */
+            display: inline-block;
         }
 
         .nav-bar a:hover {
-            background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
-            transform: translateY(-2px); /* Pequeño efecto de levantamiento */
+            background-color: #37474f; /* Gris oscuro al pasar el ratón */
+            color: #eceff1; /* Gris muy claro al pasar el ratón */
+            transform: translateY(-2px);
         }
 
         /* Encabezado (Header) */
         .header {
-            background-color: white;
+            background-color: #eceff1; /* Un gris muy claro */
             padding: 30px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             flex-wrap: wrap;
             gap: 20px;
+            transition: background-color 0.3s ease;
         }
 
         .header div {
@@ -72,14 +76,16 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 28px;
             font-weight: 700;
-            color: #333;
+            color: #263238; /* Gris oscuro */
             margin: 0;
+            transition: color 0.3s ease;
         }
 
         .descripcion {
             font-size: 16px;
-            color: #666;
+            color: #546e7a; /* Un gris azulado más suave */
             margin-top: 5px;
+            transition: color 0.3s ease;
         }
 
         .avatar {
@@ -87,61 +93,69 @@
             height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #007acc; /* Borde un poco más grueso y notorio */
+            border: 4px solid #546e7a; /* Borde gris azulado */
             flex-shrink: 0;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Sombra para el avatar */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transition: border-color 0.3s ease;
         }
 
         /* Secciones de Contenido */
         section {
-            padding: 40px 25px; /* Ligeramente más padding horizontal */
+            padding: 40px 25px;
             max-width: 900px;
-            margin: 35px auto; /* Más espacio entre secciones */
-            background-color: #ffffff;
-            border-radius: 10px; /* Bordes un poco más redondeados */
-            box-shadow: 0 3px 8px rgba(0,0,0,0.08); /* Sombra suave para las secciones */
+            margin: 35px auto;
+            background-color: #fff; /* Blanco para las secciones */
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         h2 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 26px; /* Títulos un poco más grandes */
-            border-left: 6px solid #007acc; /* Borde azul más grueso */
-            padding-left: 18px; /* Más espacio a la izquierda */
+            font-size: 26px;
+            border-left: 6px solid #546e7a; /* Borde gris azulado */
+            padding-left: 18px;
             margin-top: 0;
-            margin-bottom: 35px; /* Más espacio debajo del título */
-            color: #0056b3;
-            display: flex; /* Para alinear el ícono y el texto */
+            margin-bottom: 35px;
+            color: #263238; /* Gris oscuro */
+            display: flex;
             align-items: center;
-            gap: 10px; /* Espacio entre el ícono y el texto */
+            gap: 10px;
+            transition: border-color 0.3s ease, color 0.3s ease;
         }
 
         /* Proyectos Individuales */
         .proyecto {
-            background-color: #fcfcfc;
-            border: 1px solid #e0e0e0; /* Borde un poco más visible */
-            border-radius: 10px; /* Bordes más redondeados */
-            padding: 25px; /* Más padding */
-            margin-bottom: 30px; /* Más espacio entre proyectos */
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06); /* Sombra suave */
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            background-color: #f9fbe7; /* Un amarillo muy pálido */
+            border: 1px solid #e0f2f7; /* Un azul muy claro */
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease, border-color 0.3s ease;
         }
 
         .proyecto:hover {
-            transform: translateY(-7px); /* Efecto de "levantar" más pronunciado */
-            box-shadow: 0 8px 16px rgba(0,0,0,0.12); /* Sombra más fuerte al pasar el ratón */
+            transform: translateY(-7px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+            background-color: #f0f4c3; /* Un amarillo pálido al pasar el ratón */
+            border-color: #b2dfdb; /* Un verde azulado claro al pasar el ratón */
         }
 
         .proyecto h3 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 22px; /* Título de proyecto más grande */
-            color: #333;
+            font-size: 22px;
+            color: #263238; /* Gris oscuro */
             margin-top: 0;
             margin-bottom: 12px;
+            transition: color 0.3s ease;
         }
 
         .proyecto p {
-            font-size: 15px; /* Texto de descripción un poco más grande */
+            font-size: 15px;
             margin-bottom: 20px;
+            color: #455a64; /* Un gris azulado oscuro */
+            transition: color 0.3s ease;
         }
 
         img.preview {
@@ -149,62 +163,65 @@
             height: auto;
             border-radius: 8px;
             margin-top: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra más pronunciada para las imágenes */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             margin-bottom: 20px;
-            border: 1px solid #ddd; /* Borde sutil para las imágenes */
+            border: 1px solid #cfd8dc; /* Un gris azulado muy claro */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         /* Estilo para los enlaces de documentos (como botones) */
         .archivo {
-            display: inline-flex; /* Usar flexbox para alinear icono y texto */
-            align-items: center; /* Centrar verticalmente */
-            gap: 8px; /* Espacio entre icono y texto */
-            background-color: #007acc;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #546e7a; /* Gris azulado */
             color: white;
-            padding: 12px 20px; /* Más padding para los botones */
-            border-radius: 6px; /* Bordes ligeramente más redondeados */
+            padding: 12px 20px;
+            border-radius: 6px;
             text-decoration: none;
-            font-size: 16px; /* Botones un poco más grandes */
-            margin-top: 15px; /* Más espacio superior */
+            font-size: 16px;
+            margin-top: 15px;
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .archivo:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px); /* Pequeño efecto de levantamiento */
+            background-color: #37474f; /* Gris oscuro al pasar el ratón */
+            transform: translateY(-2px);
             text-decoration: none;
         }
-        
+
         /* Sección de Contacto */
         .contacto p {
-            line-height: 2.5; /* Más espacio entre los enlaces de contacto */
+            line-height: 2.5;
         }
         .contacto .archivo {
             background-color: transparent;
-            color: #007acc;
+            color: #546e7a; /* Gris azulado */
             padding: 0;
             margin: 0;
             border-radius: 0;
             text-decoration: underline;
-            font-size: 17px; /* Un poco más grande para el contacto */
-            font-weight: 500; /* Ligeramente más negrita */
-            border: none; /* Elimina cualquier borde residual */
+            font-size: 17px;
+            font-weight: 500;
+            border: none;
+            transition: color 0.3s ease;
         }
         .contacto .archivo:hover {
-            color: #0056b3;
+            color: #263238; /* Gris oscuro al pasar el ratón */
             text-decoration: none;
-            transform: none; /* Deshabilita el efecto de levantamiento para enlaces de contacto */
+            transform: none;
         }
 
         /* Pie de Página (Footer) */
         footer {
             text-align: center;
-            padding: 30px 20px; /* Más padding en el footer */
-            font-size: 14px; /* Un poco más grande */
-            color: #777; /* Gris un poco más claro */
-            margin-top: 60px; /* Más margen superior */
-            background-color: white;
-            border-top: 1px solid #eee;
+            padding: 30px 20px;
+            font-size: 14px;
+            color: #78909c; /* Un gris azulado más claro */
+            margin-top: 60px;
+            background-color: #eceff1; /* Gris muy claro */
+            border-top: 1px solid #cfd8dc; /* Un gris azulado muy claro */
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
 
         /* --- Media Queries para Diseño Responsive --- */
@@ -251,11 +268,11 @@
                 font-size: 20px;
             }
             .archivo {
-                display: flex; /* Cambiar a flex para centrar mejor en móvil */
-                justify-content: center; /* Centrar contenido */
-                width: 90%; /* Ocupar casi todo el ancho */
-                max-width: 250px; /* Ancho máximo para que no sea demasiado largo */
-                margin: 15px auto 0; /* Centrar y más espacio */
+                display: flex;
+                justify-content: center;
+                width: 90%;
+                max-width: 250px;
+                margin: 15px auto 0;
                 padding: 10px 15px;
                 font-size: 15px;
             }
@@ -266,8 +283,8 @@
 
         @media (max-width: 480px) {
             .nav-bar a {
-                display: block; /* Cada enlace en su propia línea */
-                margin: 5px 0; /* Espacio vertical entre enlaces */
+                display: block;
+                margin: 5px 0;
             }
             .titulo {
                 font-size: 22px;
