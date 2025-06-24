@@ -23,6 +23,30 @@
             color: #4a4a4a; /* Gris oscuro para el texto principal */
         }
 
+        /* Navegación (Nueva sección) */
+        .nav-bar {
+            background-color: #007acc; /* Color azul para la barra de navegación */
+            padding: 10px 40px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .nav-bar a:hover {
+            background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+        }
+
         /* Encabezado (Header) */
         .header {
             background-color: white;
@@ -167,6 +191,13 @@
 
         /* --- Media Queries para Diseño Responsive --- */
         @media (max-width: 768px) {
+            .nav-bar {
+                padding: 10px 20px;
+            }
+            .nav-bar a {
+                display: block; /* Cada enlace en su propia línea */
+                margin: 5px 0; /* Espacio vertical entre enlaces */
+            }
             .header {
                 flex-direction: column; /* Apila los elementos del header en pantallas pequeñas */
                 text-align: center;
@@ -228,13 +259,19 @@
         <img class="avatar" src="https://media.licdn.com/dms/image/v2/D4D03AQEXPSX1kp8Vfw/profile-displayphoto-shrink_400_400/B4DZX8gZTcGkAk-/0/1743698106302?e=1755734400&v=beta&t=m62Pt3zFer0V-EpIxzT17-gIpIJK0p55D4sP1KQMjhg" alt="German Ferrer">
     </div>
 
-    <section>
-        <h2>📌 Sobre mí</h2>
+    <nav class="nav-bar">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="sobre-mi">
+        <h2>👨‍💻 Sobre mí</h2>
         <p>Titulado como Técnico en Electromecánico, me encuentro promediando la carrera de Ingeniería Industrial en UTN FRH. Mi enfoque se centra en la gestion de proyectos para la mejora continua de productos y procesos.</p>
     </section>
 
-    <section>
-        <h2>🛠 Proyectos</h2>
+    <section id="proyectos">
+        <h2>⚙️ Proyectos</h2>
 
         <div class="proyecto">
             <h3>Granalladora automatizada</h3>
@@ -251,8 +288,8 @@
         </div>
     </section>
 
-    <section>
-        <h2>📬 Contacto</h2>
+    <section id="contacto">
+        <h2>📧 Contacto</h2>
         <div class="contacto">
             <p>
                 <a class="archivo" href="https://www.linkedin.com/in/germanignacioferrer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
