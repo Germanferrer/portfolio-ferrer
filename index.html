@@ -1,3 +1,9 @@
+¡Entendido! Vamos a ajustar los colores para que se vea más profesional y agregar las nuevas secciones de Certificaciones y Habilidades/Tecnología.
+
+He cambiado el color de fondo de la sección de proyectos a un tono de gris muy claro (#f9f9f9), que es más neutro y elegante, y el borde a un gris un poco más oscuro. También he actualizado el color del hover para que mantenga la armonía.
+
+HTML
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -126,8 +132,8 @@
 
         /* Proyectos Individuales */
         .proyecto {
-            background-color: #f9fbe7; /* Un amarillo muy pálido */
-            border: 1px solid #e0f2f7; /* Un azul muy claro */
+            background-color: #f9f9f9; /* Gris muy claro para los proyectos */
+            border: 1px solid #e0e0e0; /* Un gris más oscuro */
             border-radius: 10px;
             padding: 25px;
             margin-bottom: 30px;
@@ -138,8 +144,8 @@
         .proyecto:hover {
             transform: translateY(-7px);
             box-shadow: 0 8px 16px rgba(0,0,0,0.12);
-            background-color: #f0f4c3; /* Un amarillo pálido al pasar el ratón */
-            border-color: #b2dfdb; /* Un verde azulado claro al pasar el ratón */
+            background-color: #f3f3f3; /* Un gris ligeramente más oscuro al pasar el ratón */
+            border-color: #d0d0d0; /* Borde más oscuro al pasar el ratón */
         }
 
         .proyecto h3 {
@@ -212,6 +218,32 @@
             transform: none;
         }
 
+        /* Lista de habilidades y certificaciones */
+        .skills-list, .cert-list {
+            list-style: none; /* Quita los puntos de la lista */
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+            gap: 10px; /* Espacio entre los elementos */
+            margin-bottom: 20px;
+        }
+
+        .skills-list li, .cert-list li {
+            background-color: #eceff1; /* Fondo gris claro para cada elemento */
+            color: #37474f; /* Texto gris oscuro */
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 500;
+            border: 1px solid #cfd8dc; /* Borde sutil */
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .skills-list li:hover, .cert-list li:hover {
+            background-color: #cfd8dc; /* Fondo ligeramente más oscuro al pasar el ratón */
+            transform: translateY(-2px);
+        }
+
         /* Pie de Página (Footer) */
         footer {
             text-align: center;
@@ -279,6 +311,10 @@
             .contacto .archivo {
                 font-size: 16px;
             }
+            .skills-list li, .cert-list li {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -310,6 +346,10 @@
             .contacto .archivo {
                 font-size: 15px;
             }
+            .skills-list li, .cert-list li {
+                font-size: 13px;
+                padding: 5px 10px;
+            }
         }
     </style>
 </head>
@@ -326,6 +366,8 @@
     <nav class="nav-bar">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#proyectos">Proyectos</a>
+        <a href="#certificaciones">Certificaciones</a>
+        <a href="#habilidades">Habilidades</a>
         <a href="#contacto">Contacto</a>
     </nav>
 
@@ -350,6 +392,29 @@
             <img class="preview" src="https://github.com/Germanferrer/project-portfolio/blob/main/COLECTOR-PLANTA-DE-CHANCADO-ANTAPACCAY.jpg?raw=true" alt="Colector de polvo">
             <a class="archivo" href="https://github.com/Germanferrer/project-portfolio/blob/main/docs/informe_colector.pdf?raw=true" target="_blank"><i class="fas fa-file-alt"></i> Ver informe técnico</a>
         </div>
+    </section>
+
+    <section id="certificaciones">
+        <h2><i class="fas fa-certificate"></i> Certificaciones</h2>
+        <ul class="cert-list">
+            <li>Curso de Solid Edge (Mallcu Sistemas)</li>
+            <li>Curso de Power BI (UTN FRH)</li>
+            <li>Curso de Reparación de PC (UTN FRH)</li>
+            <li>Curso de Control y Automatización (PLC) (UTN FRH)</li>
+        </ul>
+    </section>
+
+    <section id="habilidades">
+        <h2><i class="fas fa-wrench"></i> Habilidades y Tecnologías</h2>
+        <ul class="skills-list">
+            <li>SolidWorks</li>
+            <li>Solid Edge</li>
+            <li>SketchUp</li>
+            <li>AutoCAD</li>
+            <li>Power BI</li>
+            <li>Excel</li>
+            <li>Blender</li>
+        </ul>
     </section>
 
     <section id="contacto">
