@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -35,6 +34,10 @@
             top: 0;
             z-index: 1000;
             transition: background-color 0.3s ease;
+            height: 60px; /* Definir una altura fija para la barra de navegación */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .nav-bar a {
@@ -77,6 +80,7 @@
             color: #263238; /* Gris oscuro */
             margin: 0;
             transition: color 0.3s ease;
+            flex-grow: 1; /* Permite que el título ocupe espacio y empuje al avatar */
         }
 
         .descripcion {
@@ -112,6 +116,9 @@
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
             animation: slideInUp 0.8s ease-out forwards; /* Animación de aparición */
             opacity: 0; /* Inicialmente oculto para la animación */
+
+            /* IMPORTANTE: Ajuste para el desplazamiento con la barra fija */
+            scroll-margin-top: 80px; /* Un poco más que la altura de la barra de navegación para un mejor espaciado */
         }
 
         section:nth-of-type(1) { animation-delay: 0.1s; }
@@ -285,6 +292,8 @@
         @media (max-width: 768px) {
             .nav-bar {
                 padding: 10px 15px;
+                height: auto; /* Dejar que la altura se ajuste en móviles */
+                flex-wrap: wrap; /* Permite que los enlaces se envuelvan */
             }
             .nav-bar a {
                 padding: 8px 15px;
@@ -312,6 +321,7 @@
             section {
                 padding: 30px 20px;
                 margin: 25px auto;
+                scroll-margin-top: 120px; /* Ajuste para móviles si la nav-bar se vuelve más alta */
             }
             h2 {
                 font-size: 22px;
@@ -382,8 +392,8 @@
 
     <div class="header">
         <div>
-            <div class="titulo"><strong>Germanferrer</strong>/<strong>portfolio-ferrer</strong></div>
-            <div class="descripcion">Portfolio de proyectos de ingeniería y diseño</div>
+            <div class="titulo">German Ferrer | **Portafolio de Proyectos**</div>
+            <div class="descripcion">Ingeniería y diseño con enfoque en eficiencia e innovación.</div>
         </div>
         <img class="avatar" src="https://media.licdn.com/dms/image/v2/D4D03AQEXPSX1kp8Vfw/profile-displayphoto-shrink_400_400/B4DZX8gZTcGkAk-/0/1743698106302?e=1755734400&v=beta&t=m62Pt3zFer0V-EpIxzT17-gIpIJK0p55D4sP1KQMjhg" alt="German Ferrer">
     </div>
@@ -446,7 +456,7 @@
         <h2><i class="fas fa-paper-plane"></i> Contacto</h2>
         <div class="contacto">
             <p>
-                No dudes en contactarme a través de mis redes o correo electrónico:
+
                 <br>
                 <a class="archivo" href="https://www.linkedin.com/in/germanignacioferrer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a class="archivo" href="https://github.com/germanferrer" target="_blank"><i class="fab fa-github"></i> GitHub</a>
@@ -456,7 +466,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 German Ferrer. Todos los derechos reservados.</p>
+        <p>&copy; 2025 German Ferrer. Todos los derechos reservados.</p>
     </footer>
 
 </body>
