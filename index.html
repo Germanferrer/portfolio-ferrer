@@ -22,7 +22,7 @@
             padding: 0;
             line-height: 1.6;
             color: #37474f; /* Un gris más oscuro y neutro */
-            transition: background-color 0.3s ease;
+            transition: background-color 0.4s ease-in-out; /* Transición global para el fondo */
         }
 
         /* Navegación */
@@ -30,7 +30,7 @@
             background-color: #263238; /* Un gris oscuro */
             padding: 10px 40px;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Sombra más pronunciada */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -43,7 +43,7 @@
             padding: 10px 20px;
             margin: 0 10px;
             border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+            transition: background-color 0.3s ease-out, transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.3s ease; /* Transición más suave */
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             font-size: 15px;
@@ -53,7 +53,7 @@
         .nav-bar a:hover {
             background-color: #37474f; /* Gris oscuro al pasar el ratón */
             color: #eceff1; /* Gris muy claro al pasar el ratón */
-            transform: translateY(-2px);
+            transform: translateY(-3px) scale(1.02); /* Efecto de levantamiento y pequeño crecimiento */
         }
 
         /* Encabezado (Header) */
@@ -63,14 +63,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Sombra más fuerte */
             flex-wrap: wrap;
             gap: 20px;
             transition: background-color 0.3s ease;
-        }
-
-        .header div {
-            flex-grow: 1;
+            animation: fadeIn 1s ease-out; /* Animación de aparición */
         }
 
         .titulo {
@@ -96,8 +93,12 @@
             object-fit: cover;
             border: 4px solid #546e7a; /* Borde gris azulado */
             flex-shrink: 0;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            transition: border-color 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Sombra más marcada para el avatar */
+            transition: border-color 0.3s ease, transform 0.3s ease-out;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05) rotate(2deg); /* Pequeña rotación y crecimiento en hover */
         }
 
         /* Secciones de Contenido */
@@ -106,10 +107,19 @@
             max-width: 900px;
             margin: 35px auto;
             background-color: #fff; /* Blanco para las secciones */
-            border-radius: 10px;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+            border-radius: 12px; /* Bordes más redondeados */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra más definida */
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            animation: slideInUp 0.8s ease-out forwards; /* Animación de aparición */
+            opacity: 0; /* Inicialmente oculto para la animación */
         }
+
+        section:nth-of-type(1) { animation-delay: 0.1s; }
+        section:nth-of-type(2) { animation-delay: 0.2s; }
+        section:nth-of-type(3) { animation-delay: 0.3s; }
+        section:nth-of-type(4) { animation-delay: 0.4s; }
+        section:nth-of-type(5) { animation-delay: 0.5s; }
+
 
         h2 {
             font-family: 'Montserrat', sans-serif;
@@ -132,15 +142,15 @@
             border-radius: 10px;
             padding: 25px;
             margin-bottom: 30px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08); /* Sombra más definida */
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease-in-out, background-color 0.3s ease, border-color 0.3s ease;
         }
 
         .proyecto:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+            transform: translateY(-10px) scale(1.01); /* Efecto de "levantar" más pronunciado y leve crecimiento */
+            box-shadow: 0 12px 24px rgba(0,0,0,0.18); /* Sombra más fuerte al pasar el ratón */
             background-color: #f3f3f3; /* Un gris ligeramente más oscuro al pasar el ratón */
-            border-color: #d0d0d0; /* Borde más oscuro al pasar el ratón */
+            border-color: #c0c0c0; /* Borde más oscuro al pasar el ratón */
         }
 
         .proyecto h3 {
@@ -164,9 +174,9 @@
             height: auto;
             border-radius: 8px;
             margin-top: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* Sombra más pronunciada para las imágenes */
             margin-bottom: 20px;
-            border: 1px solid #cfd8dc; /* Un gris azulado muy claro */
+            border: 1px solid #cfd8dc; /* Borde sutil para las imágenes */
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -182,12 +192,13 @@
             text-decoration: none;
             font-size: 16px;
             margin-top: 15px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: background-color 0.3s ease-out, transform 0.2s ease-out, box-shadow 0.3s ease-out;
         }
 
         .archivo:hover {
             background-color: #37474f; /* Gris oscuro al pasar el ratón */
-            transform: translateY(-2px);
+            transform: translateY(-3px) scale(1.02); /* Pequeño efecto de levantamiento y crecimiento */
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
             text-decoration: none;
         }
 
@@ -205,12 +216,12 @@
             font-size: 17px;
             font-weight: 500;
             border: none;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.2s ease-out;
         }
         .contacto .archivo:hover {
             color: #263238; /* Gris oscuro al pasar el ratón */
             text-decoration: none;
-            transform: none;
+            transform: translateX(5px); /* Pequeño desplazamiento hacia la derecha */
         }
 
         /* Lista de habilidades y certificaciones */
@@ -231,12 +242,13 @@
             font-size: 15px;
             font-weight: 500;
             border: 1px solid #cfd8dc; /* Borde sutil */
-            transition: background-color 0.2s ease, transform 0.2s ease;
+            transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .skills-list li:hover, .cert-list li:hover {
             background-color: #cfd8dc; /* Fondo ligeramente más oscuro al pasar el ratón */
-            transform: translateY(-2px);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
         /* Pie de Página (Footer) */
@@ -250,6 +262,24 @@
             border-top: 1px solid #cfd8dc; /* Un gris azulado muy claro */
             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
+
+        /* Animaciones Keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
 
         /* --- Media Queries para Diseño Responsive --- */
         @media (max-width: 768px) {
@@ -395,8 +425,7 @@
             <li>Curso de Solid Edge (Mallcu Sistemas)</li>
             <li>Curso de Power BI (UTN FRH)</li>
             <li>Curso de Reparación de PC (UTN FRH)</li>
-            <li>Curso de Control y Automatización (UTN FRH)</li>
-            <li>Diseño Proyectual Asistido por Computadora (CFP Nº402)</li>
+            <li>Curso de Control y Automatización (PLC) (UTN FRH)</li>
         </ul>
     </section>
 
@@ -417,6 +446,7 @@
         <h2><i class="fas fa-paper-plane"></i> Contacto</h2>
         <div class="contacto">
             <p>
+                No dudes en contactarme a través de mis redes o correo electrónico:
                 <br>
                 <a class="archivo" href="https://www.linkedin.com/in/germanignacioferrer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a class="archivo" href="https://github.com/germanferrer" target="_blank"><i class="fab fa-github"></i> GitHub</a>
@@ -426,7 +456,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 German Ignacio Ferrer. Todos los derechos reservados.</p>
+        <p>&copy; 2024 German Ferrer. Todos los derechos reservados.</p>
     </footer>
 
 </body>
